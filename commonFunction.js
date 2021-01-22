@@ -1,6 +1,6 @@
 var request            = require('request');
 
-exports.checkBlank = function (arr, apiReference) {
+exports.checkBlank = function (arr) {
     if (!Array.isArray(arr)) {
         return 1;
     }

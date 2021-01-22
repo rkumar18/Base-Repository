@@ -1,4 +1,4 @@
-let adminServices = require('../services/adminServices');
+let restaurantServices = require('../services/restaurantServices');
 const responseMethod = require('../lib/constants/responses');
 
 exports.register = register;
@@ -38,7 +38,7 @@ exports.getOrderCsv = getOrderCsv;
 
 function register(req, res) {
   Promise.coroutine(function* () {
-    const registerResult = yield adminServices.registerAdmin(req.body);
+    const registerResult = yield restaurantServices.registerAdmin(req.body);
     return registerResult
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -51,7 +51,7 @@ function login(req, res) {
     const loginData = {};
     loginData.email = req.body.email;
     loginData.password = req.body.password;
-    loginResult = yield adminServices.loginViaPassword(loginData);
+    loginResult = yield restaurantServices.loginViaPassword(loginData);
     return loginResult;
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -61,7 +61,7 @@ function login(req, res) {
 }
 function forgotPassword(req, res) {
   Promise.coroutine(function* () {
-    result = yield adminServices.sendResetPasswordLink(req.body);
+    result = yield restaurantServices.sendResetPasswordLink(req.body);
     return result;
   })().then((data) => {
     return responseMethod.sendSuccess(res, data);
@@ -71,7 +71,7 @@ function forgotPassword(req, res) {
 }
 function checkPasswordResetLink(req, res) {
   Promise.coroutine(function* () {
-    result = yield adminServices.checkPasswordResetLink(req, res);
+    result = yield restaurantServices.checkPasswordResetLink(req, res);
     return result;
   })().then((data) => {
     return responseMethod.responseMessages.SUCCESS
@@ -81,7 +81,7 @@ function checkPasswordResetLink(req, res) {
 }
 function resetPassword(req, res) {
   Promise.coroutine(function* () {
-    result = yield adminServices.resetPassswordByResetLink(req, res);
+    result = yield restaurantServices.resetPassswordByResetLink(req, res);
     return result;
   })().then((data) => {
     return responseMethod.responseMessages.SUCCESS
@@ -92,7 +92,7 @@ function resetPassword(req, res) {
 function changePassword(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    result = yield adminServices.changePassword(req.body, jwtDecodedData);
+    result = yield restaurantServices.changePassword(req.body, jwtDecodedData);
     return result;
   })().then((data) => {
     return responseMethod.sendSuccess(res, data);
@@ -103,7 +103,7 @@ function changePassword(req, res) {
 function getProfile(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.getProfile(jwtDecodedData);
+    const result = yield restaurantServices.getProfile(jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -114,7 +114,7 @@ function getProfile(req, res) {
 function editProfile(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.editProfile(req.body, jwtDecodedData);
+    const result = yield restaurantServices.editProfile(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -125,7 +125,7 @@ function editProfile(req, res) {
 function addCms(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.addCms(req.body, jwtDecodedData);
+    const result = yield restaurantServices.addCms(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -136,7 +136,7 @@ function addCms(req, res) {
 function getCms(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const cmsData = yield adminServices.getCms(req.body, jwtDecodedData);
+    const cmsData = yield restaurantServices.getCms(req.body, jwtDecodedData);
     return cmsData
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -147,7 +147,7 @@ function getCms(req, res) {
 function getRetailer(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const restaurantData = yield adminServices.getRetailer(req.body, jwtDecodedData);
+    const restaurantData = yield restaurantServices.getRetailer(req.body, jwtDecodedData);
     return restaurantData
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -158,7 +158,7 @@ function getRetailer(req, res) {
 function updateRetailerDetails(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.updateRetailerDetails(req.body, jwtDecodedData);
+    const result = yield restaurantServices.updateRetailerDetails(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -169,7 +169,7 @@ function updateRetailerDetails(req, res) {
 function getRetailerById(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.getRetailerById(req.body, jwtDecodedData);
+    const result = yield restaurantServices.getRetailerById(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -180,7 +180,7 @@ function getRetailerById(req, res) {
 function addCategory(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.addCategory(req.body, jwtDecodedData);
+    const result = yield restaurantServices.addCategory(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -191,7 +191,7 @@ function addCategory(req, res) {
 function getAllCategory(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.getAllCategory(req.body, jwtDecodedData);
+    const result = yield restaurantServices.getAllCategory(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -202,7 +202,7 @@ function getAllCategory(req, res) {
 function updateCategory(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.updateCategory(req.body, jwtDecodedData);
+    const result = yield restaurantServices.updateCategory(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -213,7 +213,7 @@ function updateCategory(req, res) {
 function getCategoryById(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.getCategoryById(req.body, jwtDecodedData);
+    const result = yield restaurantServices.getCategoryById(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -224,7 +224,7 @@ function getCategoryById(req, res) {
 function addProduct(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.addProduct(req.body, jwtDecodedData);
+    const result = yield restaurantServices.addProduct(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -235,7 +235,7 @@ function addProduct(req, res) {
 function getAllProduct(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.getAllProduct(req.body, jwtDecodedData);
+    const result = yield restaurantServices.getAllProduct(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -246,7 +246,7 @@ function getAllProduct(req, res) {
 function updateProduct(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.updateProduct(req.body, jwtDecodedData);
+    const result = yield restaurantServices.updateProduct(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -257,7 +257,7 @@ function updateProduct(req, res) {
 function getProductById(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.getProductById(req.body, jwtDecodedData);
+    const result = yield restaurantServices.getProductById(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -268,7 +268,7 @@ function getProductById(req, res) {
 function addSupplier(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.addSupplier(req.body, jwtDecodedData);
+    const result = yield restaurantServices.addSupplier(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -279,7 +279,7 @@ function addSupplier(req, res) {
 function getAllSupplier(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.getAllSupplier(req.body, jwtDecodedData);
+    const result = yield restaurantServices.getAllSupplier(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -290,7 +290,7 @@ function getAllSupplier(req, res) {
 function updateSupplierDetails(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.updateSupplierDetails(req.body, jwtDecodedData);
+    const result = yield restaurantServices.updateSupplierDetails(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -301,7 +301,7 @@ function updateSupplierDetails(req, res) {
 function getSupplierById(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const result = yield adminServices.getSupplierById(req.body, jwtDecodedData);
+    const result = yield restaurantServices.getSupplierById(req.body, jwtDecodedData);
     return result
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -313,7 +313,7 @@ function getSupplierById(req, res) {
 function getRestaurantOrderCsv(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const restaurantData = yield adminServices.getRestaurantOrderCsv(req.body, jwtDecodedData);
+    const restaurantData = yield restaurantServices.getRestaurantOrderCsv(req.body, jwtDecodedData);
     return restaurantData
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);
@@ -324,7 +324,7 @@ function getRestaurantOrderCsv(req, res) {
 function getOrderCsv(req, res) {
   Promise.coroutine(function* () {
     const jwtDecodedData = req.decoded;
-    const restaurantData = yield adminServices.getOrderCsv(req.body, jwtDecodedData);
+    const restaurantData = yield restaurantServices.getOrderCsv(req.body, jwtDecodedData);
     return restaurantData
   })().then((data) => {
     return responseMethod.sendSuccess(res, null, null, data);

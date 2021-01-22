@@ -1,14 +1,14 @@
 const responses = require('../lib/constants/responses');
 const commonFunction = require('../commonFunction');
 const Models = require('../models/index');
-const JwtService = require('../services/jwtServices');
+const JwtService = require('./jwtServices');
 const md5 = require('md5');
 const moment = require('moment');
 const _ = require("lodash");
 const flatten = require("flat");
 const path = require('path');
 const sendgridService = require('../utility/email-services/sendgridService');
-const fileUploadServices = require('../services/fileUploadServices');
+const fileUploadServices = require('./fileUploadServices');
 const constants = require('../lib/constants/constants');
 const mongoose = require('mongoose');
 const es = require("event-stream");
@@ -47,9 +47,6 @@ function registerAdmin(registerData) {
                 event: "registerAdmin",
                 msg: registerData
             });
-            if (!registerData.email || !registerData.password) {
-                return reject(responses.responseMessages.PARAMETER_MISSING);
-            }
             let dataObject = {
                 name: name,
                 email: email,
