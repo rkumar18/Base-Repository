@@ -1,5 +1,5 @@
 {
-  "name": "iscon-empex",
+  "name": "project-node",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,8 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "dev": "export NODE_ENV=dev && pm2 start server.js --name DEV_ISCON_EMPEX",
-    "live": "export NODE_ENV=live && pm2 start server.js --name LIVE_ISCON_EMPEX"
+    "dev": "export NODE_ENV=dev && pm2 start server.js --name DEV_PROJECT_NODE",
+    "live": "export NODE_ENV=live && pm2 start server.js --name LIVE_PROJECT_NODE"
   },
   "author": "Syed Asad",
   "license": "ISC",

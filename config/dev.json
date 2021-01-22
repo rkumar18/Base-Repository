@@ -71,17 +71,17 @@
         "fromEmail": "syedasad0@gmail.com"
     },
     "otpService": {
-        "auth_key": "188773ACPJTF2Hoj6D5a38ca15",
-        "sender_id": "ESYTNK",
-        "template_id": "5e74fdd352a1b11b58e7c1ec"
+        "auth_key": "1XXXXXXXX5",
+        "sender_id": "XXXXX",
+        "template_id": "XXXXX"
     },
     "fcmKey": {
-        "android": "AAAA45O6rzw:APA91bFYaYzZo9u4jbd-TSoHkNyvaItX3sCxV2RvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-Wbp5Ah7efD8LF9BpNWoZ8Lw62g5QZTvUicQkfCW0",
-        "ios": "AAAA45O6rzw:APA91bFYaYzZo9u4jbd-TSoHkNyvaItX3sCxV2RvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-Wbp5Ah7efD8LF9BpNWoZ8Lw62g5QZTvUicQkfCW0"
+        "android": "AAAA45OXXXXXXXXXXXXvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-XXXXXXXX",
+        "ios": "AAAA45OXXXXXXXXXXXXvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-XXXXXXXX"
     },
     "fcmKeyUser": {
-        "android": "AAAA45O6rzw:APA91bFYaYzZo9u4jbd-TSoHkNyvaItX3sCxV2RvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-Wbp5Ah7efD8LF9BpNWoZ8Lw62g5QZTvUicQkfCW0",
-        "ios": "AAAA45O6rzw:APA91bFYaYzZo9u4jbd-TSoHkNyvaItX3sCxV2RvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-Wbp5Ah7efD8LF9BpNWoZ8Lw62g5QZTvUicQkfCW0"
+        "android": "AAAA45OXXXXXXXXXXXXvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-XXXXXXXX",
+        "ios": "AAAA45OXXXXXXXXXXXXvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-XXXXXXXX"
     },
     "exportUrl":"http://appgrowthcompany.com:4023/static/admin/"
 }
