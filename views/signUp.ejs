@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <style>
+        .form-signin {
+            margin: 10px auto;
+            width: 500px;
+        }
+
+        .registration {
+
+            color: red;
+            font-size: 42px;
+
+            margin-left: 415px
+        }
+
+        .exists {
+
+            color: rgba(60, 52, 105, 0.959);
+            font-size: 20px;
+
+            margin-left: 400px
+        }
+    </style>
+    <title><%= title %></title>
+    <%  if(status===1){ %>
+    <div class="registration">Registration Successfull</div>
+    <% } %>
+    <%  if(status===11000){ %>
+    <div class="exists">associated with another account(Account already taken, try another)</div>
+    <% } %>
+</head>
+
+<body>
+
+    <div id="logreg-forms">
+        <form class="form-signin mt-5" method="POST" enctype="multipart/form-data">
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">
+                Charity Form
+            </h1>
+
+            <input type="text" class="form-control" placeholder="Name of NGO/Organization" required="" autofocus=""
+                name="organization" /><br />
+            <input type="text" class="form-control" placeholder="Address" required="" name="address" /><br>
+            <input type="text" class="form-control" placeholder="Telephone Number" required="" name="phone" />
+            <br>
+            <input type="text" class="form-control" placeholder="E-mail" required="" name="email" />
+            <br>
+            <input type="text" class="form-control" placeholder="Social Media details" required="" name="socialmedia" />
+            <br>
+            <label>Document 1 </label>
+            <input type="file" placeholder=" image" name="file" class="form-control" aria-required="true"
+                aria-invalid="false" multiple="multiple" required>
+            <br>
+            <br>
+            <label>Document 2 </label>
+            <input type="file1" placeholder=" image" name="file" class="form-control" aria-required="true"
+                aria-invalid="false" multiple="multiple" required>
+            <br>
+            <br>
+            <label>Document 3 </label>
+            <input type="file2" placeholder=" image" name="file" class="form-control" aria-required="true"
+                aria-invalid="false" multiple="multiple" required>
+            <br>
+            <label>Profession</label>
+            <select name="profession">
+                <% var row = ['Working','Business']; %>
+                <% row.forEach(function(row){ %>
+                <option value="<%= row %>"><%= row %></option>
+                <% }) %>
+            </select>
+            <br>
+            <input type="text" class="form-control" placeholder="Monthly Earning" required="" name="earning" />
+            <br>
+            <input type="text" class="form-control" placeholder="Bank Details" required="" name="bank" />
+            <br>
+            <input type="text" class="form-control" placeholder="Tax Details" required="" name="tax" />
+            <br>
+            <input type="text" class="form-control" placeholder="Any References" required="" name="references" />
+            <br>
+
+            <button class="btn btn-success btn-block" formaction="/charity/charity/register" type="submit">Charity
+                Registration</button>
+
+            <hr />
+
+        </form>
+
+        <br />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

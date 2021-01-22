@@ -1,5 +1,5 @@
 
-let authController = require('../../modules/auth/controllers/authController');
+let authController = require('../../auth/controllers/authController');
 
 let ACCOUNT_SID = config.get('twillioCredentials.accountSid');
 let AUTH_TOKEN = config.get('twillioCredentials.authToken');

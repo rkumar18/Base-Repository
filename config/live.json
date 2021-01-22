@@ -1,0 +1,87 @@
+{
+    "heartbeat": true,
+    "PORT": 4040,
+    "databaseSettings": {
+        "mongoDb": {
+            "host": "localhost",
+            "port": "27017",
+            "user": "root",
+            "password": "",
+            "database": "iscon-empex"
+        }
+    },
+    "logFiles": {
+        "allLogsFilePath": "../logs/all.log",
+        "errorLogsFilePath": "../logs/error.log",
+        "webhookLogsFilePath": "../logs/webhook.log",
+        "locationLogsFilePath": "../logs/location.log",
+        "importTaskLogsFilePath": "../logs/import.log",
+        "requestLogspath": "../logs/request.log"
+    },
+    "s3BucketCredentials": {
+        "bucket": "nill",
+        "accessKeyId": "nill",
+        "secretAccessKey": "nill",
+        "s3URL": "nill",
+        "folder": {
+            "userProfileImages": "user_profile",
+            "userProfileDefaultImage": "user.png"
+        }
+    },
+    "iOSPushSettings": {
+        "iosApnCertificate": "nill/path.pem",
+        "gateway": "gateway.push.apple.com"
+    },
+    "androidPushSettings": {
+        "brandName": "nill",
+        "gcmSender": "nill"
+    },
+    "nodeMailerAuth": {
+        "mailer_email": "XXX",
+        "mailer_password": "XXX"
+    },
+    "emailCredentials": {
+        "host": "smtp.mandrillapp.com",
+        "port": 587,
+        "senderEmail": "nill",
+        "multipleSupportEmailIds": "'nill'",
+        "senderPassword": "nill",
+        "From": "nill <nill>",
+        "signature": "nill",
+        "particularSignature": "nill",
+        "devTeamSignature": "nill",
+        "bcc": "nill"
+    },
+    "twillioCredentials": {
+        "accountSid": "AC123456",
+        "authToken": "XXXX",
+        "fromNumber": "XXXX"
+    },
+    "JWT_SERVICE": {
+        "jwt_secret": "worldisfullofdevelopers"
+    },
+    "emailService": {
+        "domain": "sandbox041994f63993430caed4f35a3c1047ce.mailgun.org",
+        "from": "syedasad0@gmail.com",
+        "apiKey": "10a46de058672dcf430b3a2e16e1365d-cb3791c4-1c0969f8",
+        "smtp_password": "f5c9363178c9fe1c1d0f6baac0e8d247-cb3791c4-ef980569"
+    },
+    "sendGrid": {
+        "sendgrid_api_key": "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",
+        "fromEmail": "syedasad0@gmail.com"
+    },
+    "otpService": {
+        "auth_key": "188773ACPJTF2Hoj6D5a38ca15",
+        "sender_id": "ESYTNK",
+        "template_id": "5e74fdd352a1b11b58e7c1ec"
+    },
+    "fcmKey": {
+        "android": "AAAA45O6rzw:APA91bFYaYzZo9u4jbd-TSoHkNyvaItX3sCxV2RvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-Wbp5Ah7efD8LF9BpNWoZ8Lw62g5QZTvUicQkfCW0",
+        "ios": "AAAA45O6rzw:APA91bFYaYzZo9u4jbd-TSoHkNyvaItX3sCxV2RvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-Wbp5Ah7efD8LF9BpNWoZ8Lw62g5QZTvUicQkfCW0"
+    },
+    "fcmKeyUser": {
+        "android": "AAAA45O6rzw:APA91bFYaYzZo9u4jbd-TSoHkNyvaItX3sCxV2RvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-Wbp5Ah7efD8LF9BpNWoZ8Lw62g5QZTvUicQkfCW0",
+        "ios": "AAAA45O6rzw:APA91bFYaYzZo9u4jbd-TSoHkNyvaItX3sCxV2RvUlN3Ha9V5BxgY48R4PXeu6PHIxWYmZdz32J7qYK9yFDXFuu6hQHQ8wGSnCy-Wbp5Ah7efD8LF9BpNWoZ8Lw62g5QZTvUicQkfCW0"
+    },
+    "exportUrl":"http://appgrowthcompany.com:4023/static/admin/"
+}

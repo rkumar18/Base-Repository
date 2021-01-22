@@ -1,5 +1,5 @@
 {
-  "name": "base",
+  "name": "iscon-empex",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,28 +7,38 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "export NODE_ENV=dev && pm2 start server.js --name DEV_ISCON_EMPEX",
+    "live": "export NODE_ENV=live && pm2 start server.js --name LIVE_ISCON_EMPEX"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "base",
+  "author": "Syed Asad",
   "license": "ISC",
-  "homepage": "",
   "dependencies": {
-    "@hapi/joi": "^17.1.1",
+    "@sendgrid/mail": "^7.3.0",
+    "agenda": "^3.1.0",
+    "aws-sdk": "^2.768.0",
     "bluebird": "^3.7.2",
-    "config": "^3.3.1",
+    "config": "^3.3.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "event-stream": "^4.0.1",
     "express": "^4.17.1",
-    "md5": "^2.2.1",
-    "mongodb": "^3.5.9",
-    "nodemailer": "^6.4.10",
-    "redis": "^3.0.2",
+    "fcm-node": "^1.5.2",
+    "flat": "^5.0.2",
+    "flatten": "^1.0.3",
+    "handlebars": "^4.7.6",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "mailgun-js": "^0.22.0",
+    "md5": "^2.3.0",
+    "moment": "^2.29.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.10.6",
+    "mongoose-auto-increment": "^5.0.1",
+    "multer": "^1.4.2",
+    "request": "^2.88.2",
+    "sendotp": "^1.2.9",
     "socket.io": "^2.3.0",
-    "swagger": "^0.7.5",
-    "swagger-ui-express": "^4.1.4",
-    "twilio": "^3.49.1",
+    "twilio": "^3.49.3",
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.0"
   }
