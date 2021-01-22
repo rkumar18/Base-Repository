@@ -1,0 +1,35 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "base",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bluebird": "^3.7.2",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "md5": "^2.2.1",
+    "mongodb": "^3.5.9",
+    "nodemailer": "^6.4.10",
+    "redis": "^3.0.2",
+    "socket.io": "^2.3.0",
+    "swagger": "^0.7.5",
+    "swagger-ui-express": "^4.1.4",
+    "twilio": "^3.49.1",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  }
+}

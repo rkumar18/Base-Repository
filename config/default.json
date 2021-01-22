@@ -1,0 +1,76 @@
+{
+    "heartbeat": true,
+    "PORT": 3002,
+    "databaseSettings": {
+        "mongoDb": {
+            "host": "localhost",
+            "port": "27017",
+            "user": "root",
+            "password": "",
+            "database": "base"
+        },
+        "redis": {
+            "port": "6379",
+            "host": "127.0.0.1"
+        }
+    },
+    "slaveDatabaseSettings": {
+        "mongoDb": {
+            "host": "localhost",
+            "port": "27017",
+            "user": "root",
+            "password": "",
+            "database": "base_dev"
+        }
+    },
+    "mongoDbCollections": {
+        "users-table": "users"
+    },
+    "logFiles": {
+        "allLogsFilePath": "../logs/all.log",
+        "errorLogsFilePath": "../logs/error.log",
+        "webhookLogsFilePath": "../logs/webhook.log",
+        "locationLogsFilePath": "../logs/location.log",
+        "importTaskLogsFilePath": "../logs/import.log",
+        "requestLogspath": "../logs/request.log"
+    },
+    "s3BucketCredentials": {
+        "bucket": "nill",
+        "accessKeyId": "nill",
+        "secretAccessKey": "nill",
+        "s3URL": "nill",
+        "folder": {
+            "userProfileImages": "user_profile",
+            "userProfileDefaultImage": "user.png"
+        }
+    },
+    "iOSPushSettings": {
+        "iosApnCertificate": "nill/path.pem",
+        "gateway": "gateway.push.apple.com"
+    },
+    "androidPushSettings": {
+        "brandName": "nill",
+        "gcmSender": "nill"
+    },
+    "nodeMailerAuth": {
+        "mailer_email": "XXX",
+        "mailer_password": "XXX"
+    },
+    "emailCredentials": {
+        "host": "smtp.mandrillapp.com",
+        "port": 587,
+        "senderEmail": "nill",
+        "multipleSupportEmailIds": "'nill'",
+        "senderPassword": "nill",
+        "From": "nill <nill>",
+        "signature": "nill",
+        "particularSignature": "nill",
+        "devTeamSignature": "nill",
+        "bcc": "nill"
+    },
+    "twillioCredentials": {
+        "accountSid": "AC123456",
+        "authToken": "XXXX",
+        "fromNumber": "XXXX"
+    }
+}
